@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Page Title</title>
+</head>
+<body>    
+    <script type="module">
+        import SusJS from './sus.js'; 
+
+        SusJS.load('pk_xxx').then(sus => {
+            sus.get().then(data => {
+                console.log('Fingerprint data:', data);
+            }).catch(error => {
+                console.error('Error collecting fingerprint data:', error);
+            });
+        });
+    </script>
+</html>
